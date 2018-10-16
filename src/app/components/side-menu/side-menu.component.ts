@@ -18,10 +18,10 @@ export class SideMenuComponent implements OnInit {
       ]),
       new SideMenuItemViewModel(6, 'Item 1 - 3')
     ]),
-    new SideMenuItemViewModel(7, 'Item 2'),
-    new SideMenuItemViewModel(8, 'Item 3'),
-    new SideMenuItemViewModel(9, 'Item 4'),
-    new SideMenuItemViewModel(10, 'Item 5')
+    new SideMenuItemViewModel(7, 'Page 1', 'app-page1'),
+    new SideMenuItemViewModel(8, 'Page 2', 'app-page2'),
+    new SideMenuItemViewModel(9, 'Page 3', 'app-page3'),
+    new SideMenuItemViewModel(10, 'Google', 'https://www.google.com', undefined, true)
   ]);
 
   selectedId: number;

@@ -1,6 +1,7 @@
 <div class="menu-item">
-  <div class="title" (click)="handleClick()" [ngClass]="{ selected: selectedId == viewModel.id }">
-    <a href="#">{{viewModel.title}}</a>
+  <div [ngSwitch]="viewModel.isLinkExternal" class="title" (click)="handleClick()" [ngClass]="{ selected: selectedId == viewModel.id }">
+    <a *ngSwitchCase="false" routerLink="{{viewModel.link}}">{{viewModel.title}}</a>
+    <a *ngSwitchCase="true" href="{{viewModel.link}}">{{viewModel.title}}</a>
     <label [hidden]="isExpanded || !viewModel.childItems"> +</label>
   </div>
   <div [hidden]="!isExpanded" class="child-item-container" *ngIf="viewModel.childItems">
