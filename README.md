@@ -1,27 +1,10 @@
 # Recursive Side Menu
+## Overview
+Basic recursive (multi-layer) side menu
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## TODO
+* May need to provide app id for each link view model, links will be handled differently depending on source. Why?:
+* Different apps will have different pages, an internal page for app1, will be external to app2
+* Routing will eithr happen internally for internal link or externally (page refresh) for external links
+* Individual apps will need to understand how to route to their pages, when those are provided through url params
+* ...this should result in a flexible navigation system
