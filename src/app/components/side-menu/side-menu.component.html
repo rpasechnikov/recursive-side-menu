@@ -1,0 +1,6 @@
+<div *ngFor="let item of viewModel.items">
+  <app-side-menu-item 
+    [viewModel]="item" 
+    [selectedId]="selectedId"
+    (selectionChanged)="selectionChanged($event)"></app-side-menu-item>
+</div>

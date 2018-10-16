@@ -1,0 +1,13 @@
+<div class="menu-item">
+  <div class="title" (click)="handleClick()" [ngClass]="{ selected: selectedId == viewModel.id }">
+    <a href="#">{{viewModel.title}}</a>
+    <label [hidden]="isExpanded || !viewModel.childItems"> +</label>
+  </div>
+  <div [hidden]="!isExpanded" class="child-item-container" *ngIf="viewModel.childItems">
+    <app-side-menu-item 
+      *ngFor="let item of viewModel.childItems"
+      [viewModel]="item" 
+      [selectedId]="selectedId"
+      (selectionChanged)="childSelectionChanged($event)"></app-side-menu-item>
+  </div>
+</div>
